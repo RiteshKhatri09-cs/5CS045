@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<span class="logo">My Portfolio</span>
+<ul class="nav-links" id="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<button class="menu-toggle" id="menu-button" aria-expanded="false">☰</button>
+</nav>
+
+
+<div class="hero-content">
+<h1>Your Name</h1>
+<p>Frontend Developer | UI/UX Enthusiast</p>
+</div>
+</header>
+
+
+<section id="about">
+<h2>About Me</h2>
+<p>Hello! I am a frontend developer learning advanced web development.</p>
+</section>
+
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills-container">
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">React</div>
+</div>
+</section>
+
+
+<section id="projects">
+<h2>Projects</h2>
+<div id="projects-grid">
+<div class="project-card">AI Project<br><img src="https://picsum.photos/300?random=1" /></div>
+<div class="project-card">ML Project<br><img src="https://picsum.photos/300?random=2" /></div>
+<div class="project-card">DS Project<br><img src="https://picsum.photos/300?random=3" /></div>
+</div>
+</section>
+
+
+<section id="contact">
+<h2>Contact Me</h2>
+<form id="contact-form">
+<input type="text" id="name" placeholder="Your Name" required />
+<input type="email" id="email" placeholder="Your Email" required />
+<textarea id="message" placeholder="Your Message" required></textarea>
+<button type="submit">Submit</button>
+</form>
+<div id="form-message"></div>
+</section>
+
+
+<button id="popup-btn">Show Random AI/ML Image</button>
+
+
+<div id="popup" class="popup hidden">
+<span id="close-popup">✕</span>
+<img id="popup-img" src="" alt="Random" />
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
