@@ -1,70 +1,90 @@
 <!DOCTYPE html>
-<span class="logo">My Portfolio</span>
-<ul class="nav-links" id="nav-links">
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-<button class="menu-toggle" id="menu-button" aria-expanded="false">☰</button>
-</nav>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ritesh Khatri Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  
+  <video autoplay loop muted id="video-background">
+    <source src="https://www.pexels.com/download/video/4208317/" type="video/mp4">
+  </video>
 
-<div class="hero-content">
-<h1>Your Name</h1>
-<p>Frontend Developer | UI/UX Enthusiast</p>
-</div>
-</header>
+  
+  <nav class="navbar">
+    <span class="logo">Portfolio</span>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="menu-button">☰</button>
+  </nav>
 
+  
+  <header class="hero-content">
+    <h1>Ritesh Khatri</h1>
+    <p>
+      I am a Computer Science student passionate about AI, Machine Learning, and Deep Learning. 
+      I enjoy building intelligent systems and exploring cutting-edge technologies.
+    </p>
+    <button id="popup-btn">About Me</button>
+  </header>
 
-<section id="about">
-<h2>About Me</h2>
-<p>Hello! I am a frontend developer learning advanced web development.</p>
-</section>
+  
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span id="close-popup">✕</span>
+      <h2>About Me</h2>
+      <p>
+        I am Ritesh Khatri, a Computer Science student passionate about AI, Machine Learning, and Deep Learning. 
+        I have worked on multiple projects in AI/ML, developing models that solve real-world problems. 
+        I love exploring cutting-edge technologies and continuously improving my skills.
+      </p>
+    </div>
+  </div>
 
+  
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Python</div>
+      <div class="skill">AI / ML</div>
+    </div>
+  </section>
 
-<section id="skills">
-<h2>Skills</h2>
-<div class="skills-container">
-<div class="skill">HTML</div>
-<div class="skill">CSS</div>
-<div class="skill">JavaScript</div>
-<div class="skill">React</div>
-</div>
-</section>
+  
+  <section id="projects">
+    <h2>Projects</h2>
+    <div id="projects-grid">
+      <div class="project-card">AI Project
+        <img src="https://www.springboard.com/blog/wp-content/uploads/2019/02/Untitled-design-3-scaled-1536x892.jpg" alt="AI Project">
+      </div>
+      <div class="project-card">ML Project
+        <img src="https://www.5ines.com/blog/wp-content/uploads/2024/10/Untitled-design-19.webp" alt="ML Project">
+      </div>
+    </div>
+  </section>
 
+  
+  <section id="contact">
+    <h2>Contact</h2>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <textarea id="message" placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div id="form-message"></div>
+  </section>
 
-<section id="projects">
-<h2>Projects</h2>
-<div id="projects-grid">
-<div class="project-card">AI Project<br><img src="https://picsum.photos/300?random=1" /></div>
-<div class="project-card">ML Project<br><img src="https://picsum.photos/300?random=2" /></div>
-<div class="project-card">DS Project<br><img src="https://picsum.photos/300?random=3" /></div>
-</div>
-</section>
-
-
-<section id="contact">
-<h2>Contact Me</h2>
-<form id="contact-form">
-<input type="text" id="name" placeholder="Your Name" required />
-<input type="email" id="email" placeholder="Your Email" required />
-<textarea id="message" placeholder="Your Message" required></textarea>
-<button type="submit">Submit</button>
-</form>
-<div id="form-message"></div>
-</section>
-
-
-<button id="popup-btn">Show Random AI/ML Image</button>
-
-
-<div id="popup" class="popup hidden">
-<span id="close-popup">✕</span>
-<img id="popup-img" src="" alt="Random" />
-</div>
-
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

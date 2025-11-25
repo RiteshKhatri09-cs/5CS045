@@ -1,74 +1,34 @@
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-body {
-font-family: Arial, sans-serif;
-background: linear-gradient(#0a0f3c, #1b114d);
-color: white;
-}
+// Mobile menu toggle
+const menuButton = document.getElementById("menu-button");
+const navLinks = document.getElementById("nav-links");
+menuButton.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+  menuButton.innerHTML = navLinks.classList.contains("open") ? "✕" : "☰";
+});
 
+// Contact form validation
+const form = document.getElementById("contact-form");
+const messageDiv = document.getElementById("form-message");
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const msg = document.getElementById("message").value;
+  if (!name || !email || !msg) {
+    messageDiv.textContent = "Fill all fields";
+    messageDiv.style.color = "red";
+  } else {
+    messageDiv.textContent = "Message sent!";
+    messageDiv.style.color = "lightgreen";
+    form.reset();
+  }
+});
 
-/* Background video */
-#video-background {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-object-fit: cover;
-z-index: -1;
-}
+// About Me popup
+const popupBtn = document.getElementById("popup-btn");
+const popup = document.getElementById("popup");
+const closePopup = document.getElementById("close-popup");
 
-
-/* Navbar */
-.navbar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 1rem;
-}
-.nav-links {
-display: none;
-list-style: none;
-flex-direction: column;
-gap: 10px;
-}
-.nav-links.open {
-display: flex;
-}
-.menu-toggle {
-font-size: 32px;
-background: none;
-border: none;
-color: white;
-}
-
-
-/* Skills using flex */
-.skills-container {
-display: flex;
-gap: 20px;
-padding: 1rem;
-flex-wrap: wrap;
-}
-.skill {
-background: #4b3b88;
-padding: 10px 20px;
-border-radius: 8px;
-}
-
-
-/* Projects using GRID */
-#projects-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 1.5rem;
-padding: 2rem;
-}
-.project-card img {
-width: 100%;
-border-radius: 8px;
-}
-}
+popupBtn.addEventListener("click", () => popup.classList.add("active"));
+closePopup.addEventListener("click", () => popup.classList.remove("active"));
+window.addEventListener("click", e => { if(e.target === popup) popup.classList.remove("active"); });
